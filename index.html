@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f5d38897fc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <img src="./images/szablon.png" alt="szablon teloefonu" class="phone" />
+        <div class="innerPhone">
+            <div class="onInnerPhone"></div>
+            <div class="startAplication">
+                <div class="loadingContainer">
+                    <div class="lineStart1"></div>
+                    <div class="lineStart2"></div>
+                    <div class="lineStart3"></div>
+                    <div class="lineStart4"></div>
+                    <img src="./images/logo.png" alt="logo" class="loadingImage">
+                </div>
+                <!-- <div class="titleStartAplaication">Prawo zamówień publicznych <br> Ucz się mobilnie!</div> -->
+                <!-- <div class="spinner">
+                    <div class="spinnerContent"></div>
+                </div> -->
+            </div>
+            <div class="mainContentOfAplication">
+                <header>
+                    <button class="burgerMenu">
+                        <span class="hamburger__box">
+                            <span class="hamburger__inner"></span>
+                        </span>
+                    </button>
+                    <div class="main__header">
+                        <img src="./images/np.png" alt="logo" class="main__img">
+                    </div>
+                    <div class="main-border"></div>
+                </header>
+                <div class="main-menu">
+                    <div class="news main-button">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <i class="far fa-newspaper"></i>
+                        <p>Newsy</p>
+                    </div>
+                    <div class="law main-button">
+                        <i class="fas fa-layer-group"></i>
+                        <p>Prawo</p>
+                    </div>
+                    <div class="discounts main-button">
+                        <i class="fas fa-user-tag"></i>
+                        <p>Rabaty</p>
+                    </div>
+                    <div class="training main-button">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <p>Szkolenia</p>
+                    </div>
+                    <div class="learn mainPrimary-button">
+                        <i class="fas fa-graduation-cap"></i>
+                        <p>Ucz się!</p>
+                    </div>
+                </div>
+                <div class="news-component">
+                    <h2>Newsy</h2>
+                    <img src="./images/news.png" alt="" class="discountpng">
+                    <p class="discountDescription">Ucz się z nami - 62 nowe porady merytoryczne w aplikacji!</p>
+                    <p class="secondDiscountDescription">W ostatnim tygodniu mocno pracowaliśmy. Sprawdź interesujące
+                        Cię działy w sekci Ucz się, na pewnoo znajdziesz coś dla siebie. Nikt nie jest tak mądry, żeby
+                        nie mógł być mądrzejszy. Do dzieła!</p>
+                    <div class="loadMore">Załaduj więcej!</div>
+                </div>
+                <div class="law-component">
+                    <input type="text" name="" placeholder="Wpisz numer art" class="inputArt">
+                    <i class="fas fa-search"></i>
+                    <h3 class="headerLaw">
+                        Ustawa z dnia 19 września 2019 <br />Prawo zamówień publicznych (Dz. U. .....)
+                    </h3>
+                    <div class="lawCategory lawCategory-first">
+                        <h2>Dział 1 - ....</h2>
+                    </div>
+                    <div class="lawCategory">
+                        <h2>Dział 2 - ....</h2>
+                    </div>
+                    <div class="lawCategory">
+                        <h2>Dział 3 - ....</h2>
+                    </div>
+                </div>
+                <div class="discounts-component">
+                    <h2>Rabaty</h2>
+                    <img src="./images/discount.png" alt="" class="discountpng">
+                    <p class="discountDescription">Przez najbliższy tydzień 10% rabatu na każde szkolenie</p>
+                    <p class="secondDiscountDescription">Dla każdego użytkownika apilkacji mobilnej 10% rabatu na każde
+                        szkolenie. Na zgłoszeniu na szkolenie wpisz kod: 10%OFFMOBI, a otrzymasz obiecany rabat! Nie
+                        czekaj zgłoś się teraz!</p>
+                </div>
+                <div class="training-component">
+                    <h2>Szkolenia w Twojej okolicy</h2>
+                    <input type="text" placeholder="lub wybierz miasto..." class="inputTown">
+                    <i class="fas fa-search"></i>
+                    <div class="trainingSingle">
+                        <h3>Michał Kunikowski</h3>
+                        <img src="./images/michalkunikowski.jpg" alt="miichal kunikowski" class="kunikowskiimg">
+                        <p class="city">15-16 lipca - Katowice</p>
+                        <p class="title">"Zamówienia publiczne: nowelizacja systemu w praktyce"</p>
+                        <div class="iconsTraining">
+                            <i class="fas fa-share-alt"></i>
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="borderBottom"></div>
+                    </div>
+                    <div class="trainingSingle" style="margin-top: 60px;">
+                        <h3>Michał Kunikowski</h3>
+                        <img src="./images/michalkunikowski.jpg" alt="miichal kunikowski" class="kunikowskiimg">
+                        <p class="city">15-16 lipca - Katowice</p>
+                        <p class="title">"Zamówienia publiczne: nowelizacja systemu w praktyce"</p>
+                        <div class="borderBottom"></div>
+                    </div>
+                </div>
+                <div class="favorite-component">
+                    <div class="categoriesContainer">
+                        <div class="categoryInContainer active">
+                            <p>Ucz się!</p>
+                        </div>
+                        <div class="categoryInContainer">
+                            <p>Prawo</p>
+                        </div>
+                        <div class="categoryInContainer">
+                            <p>Szkolenia</p>
+                        </div>
+                    </div>
+                    <div class="wrapperLearn">
+                        <div class="faveoriteCategoryLeran">
+                            <h3>Przedmiot regulacji</h3>
+                        </div>
+                        <div class="list">
+                            <div class="list-p"><i class="fas fa-heart"></i>Porada 1</div>
+                            <div class="list-p"><i class="fas fa-heart"></i>Porada 2</div>
+                            <div class="list-p"><i class="fas fa-heart"></i>Porada 3</div>
+                        </div>
+                        <div class="faveoriteCategoryLeran">
+                            <h3>Udzielnanie zamówień</h3>
+                        </div>
+                        <div class="list">
+                            <div class="list-p"><i class="fas fa-heart"></i>Porada 1</div>
+                            <div class="list-p"><i class="fas fa-heart"></i>Porada 2</div>
+                            <div class="list-p"><i class="fas fa-heart"></i>Porada 3</div>
+                        </div>
+                        <div class="faveoriteCategoryLeran">
+                            <h3>Polittyka zakupowa</h3>
+                        </div>
+                        <div class="list">
+                            <div class="list-p"><i class="fas fa-heart"></i>Porada 1</div>
+                            <div class="list-p"><i class="fas fa-heart"></i>Porada 2</div>
+                            <div class="list-p"><i class="fas fa-heart"></i>Porada 3</div>
+                        </div>
+                    </div>
+                    <div class="wrapperLaw">
+                        <div class="articleFavorite">
+                            <p><i class="fas fa-heart"></i>Art. 1</p>
+                        </div>
+                        <div class="articleFavorite">
+                            <p><i class="fas fa-heart"></i>Art. 5</p>
+                        </div>
+                        <div class="articleFavorite">
+                            <p><i class="fas fa-heart"></i>Art. 12</p>
+                        </div>
+                        <div class="articleFavorite">
+                            <p><i class="fas fa-heart"></i>Art. 13</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="learn-component">
+                <div class="learnCategory learnCategory-first">
+                    <h2>Przedmiot Regulacji</h2>
+                    <div class="oldElements">
+                        <p>12</p>
+                    </div>
+                    <div class="newElements">
+                        <p>1</p>
+                    </div>
+                    <div class="hashtagContainer">
+                        <div class="hashtag">#www</div>
+                        <div class="hashtag">#zł</div>
+                        <div class="hashtag">#euro</div>
+                    </div>
+                </div>
+                <div class="learnCategory">
+                    <h2>Udzielanie zamówień</h2>
+                    <div class="oldElements">
+                        <p>6</p>
+                    </div>
+                    <div class="newElements">
+                        <p>3</p>
+                    </div>
+                    <div class="hashtagContainer">
+                        <div class="hashtag">#zam</div>
+                        <div class="hashtag">#zł</div>
+                        <div class="hashtag">#euro</div>
+                    </div>
+                </div>
+                <div class="learnCategory">
+                    <h2>Polityka zakupowa</h2>
+                    <div class="oldElements">
+                        <p>21</p>
+                    </div>
+                    <div class="newElements">
+                        <p>11</p>
+                    </div>
+                    <div class="hashtagContainer">
+                        <div class="hashtag">#pl</div>
+                        <div class="hashtag">#kup</div>
+                        <div class="hashtag">#polityka</div>
+                    </div>
+                </div>
+            </div>
+            <div class="learnInside-component">
+                <div class="listInsideLearn">
+                    <i class="fas fa-chevron-left backInsideLern"></i>
+                    <div class="faveoriteCategoryLeran">
+                        <h2>Przedmiot regulacji</h2>
+                        <div class="oldElements">
+                            <p>12</p>
+                        </div>
+                        <div class="newElements">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class="list">
+                        <div class="list-p newP">
+                            <div class="dottInsideList new"></div>Porada 1
+                        </div>
+                        <div class="list-p">
+                            <div class="dottInsideList"></div>Porada 2
+                        </div>
+                        <div class="list-p">
+                            <div class="dottInsideList"></div>Porada 3
+                        </div>
+                        <div class="list-p">
+                            <div class="dottInsideList"></div>Porada 4
+                        </div>
+                        <div class="list-p">
+                            <div class="dottInsideList"></div>Porada 5
+                        </div>
+                        <div class="list-p">
+                            <div class="dottInsideList"></div>Porada 6
+                        </div>
+                        <div class="list-p">
+                            <div class="dottInsideList"></div>Porada 7
+                        </div>
+                        <div class="list-p">
+                            <div class="dottInsideList"></div>Porada 8
+                        </div>
+                        <div class="list-p">
+                            <div class="dottInsideList"></div>Porada 9
+                        </div>
+                        <div class="list-p">
+                            <div class="dottInsideList"></div>Porada 10
+                        </div>
+                        <div class="list-p">
+                            <div class="dottInsideList"></div>Porada 11
+                        </div>
+                        <div class="list-p">
+                            <div class="dottInsideList"></div>Porada 12
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="firstComponent">
+                <i class="fas fa-chevron-left"></i>
+                <div class="headerComponent">
+                    <h2>Przedmiot Regulacji</h2>
+                </div>
+                <div class="advice">
+                    <i class="fas fa-share-alt"></i>
+                    <i class="fas fa-heart"></i>
+                    <h2>
+                        <div class="dott"></div> Tytuł porady
+                    </h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ab fuga amet perspiciatis,
+                        est minus illo voluptate animi ad rem quibusdam? Explicabo voluptas asperiores repellendus
+                        quae tempora rem cumque laboriosam.
+                    </p>
+                    <div class="hashatagsArticle">
+                        <div class="hashtag">#www</div>
+                        <div class="hashtag">#zł</div>
+                    </div>
+                    <div class="podst">
+                        <p>Podst: Art. 3 ust. PZP</p>
+                    </div>
+                    <h2 class="trener">Michał Kunikowski</h2>
+                    <img src="./images/michalkunikowski.jpg
+                        " alt="michal kunikowski" class="trener-img">
+                    <p class="city">15-16 lipca - Katowice</p>
+                    <p class="title">"Zamówienia publiczne: nowelizacja systemu w praktyce"</p>
+                </div>
+            </div>
+            <div class="lawCategoryComponent">
+                <i class="fas fa-chevron-left"></i>
+                <i class="fas fa-search"></i>
+                <input type="text" name="" placeholder="Wpisz numer art" class="inputArt">
+                <h3 class="headerLaw">
+                    Ustawa z dnia 19 września 2019 <br />Prawo zamówień publicznych (Dz. U. .....)
+                </h3>
+                <div class="section">Dział 1</div>
+                <div class="pLaw">
+                    Rozdział 1 - Przedmiot regulacji
+                    <div class="art">
+                        <p>Art. 1</p>
+                    </div>
+                    <i class="fas fa-share-alt"></i>
+                    <i class="fas fa-heart"></i>
+                </div>
+                <p class="articleInside">1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+                    reiciendis facilis,
+                    molestias dolores esse beatae doloremque quasi autem consectetur, eos quia voluptatem
+                    veritatis mollitia quam corporis, ad sit ipsam iste?
+                    <br>
+                    2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laborum officia
+                    exercitationem! Nisi at et eaque quibusdam perferendis aspernatur eius incidunt? Fugit nisi
+                    dolores minima itaque quam unde. Facilis, minus!
+                </p>
+                <div class="pLaw2">
+                    <div class="art">
+                        <p>Art. 2</p>
+                    </div>
+                    <i class="fas fa-share-alt"></i>
+                    <i class="fas fa-heart"></i>
+                </div>
+                <p class="articleInside">1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+                    reiciendis facilis,
+                    molestias dolores esse beatae doloremque quasi autem consectetur, eos quia voluptatem
+                    veritatis mollitia quam corporis, ad sit ipsam iste?
+                    <br>
+                    2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laborum officia
+                    exercitationem! Nisi at et eaque quibusdam perferendis aspernatur eius incidunt? Fugit nisi
+                    dolores minima itaque quam unde. Facilis, minus!
+                </p>
+            </div>
+            <div class="menu-bottom">
+                <div class="border-top"></div>
+                <i class="fas fa-user-cog"></i>
+                <div class="menu__home">
+                    <i class="fas fa-home"></i>
+                </div>
+                <i class="fas fa-heart"></i>
+            </div>
+            <div class="navigation-hamburger">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><i class="far fa-newspaper"></i>Newsy</li>
+                    <li class="navigation__item"><i class="fas fa-layer-group"></i>Prawo</li>
+                    <li class="navigation__item"> <i class="fas fa-user-tag"></i></i>Rabaty</li>
+                    <li class="navigation__item"><i class="fas fa-chalkboard-teacher"></i>Szkolenia</li>
+                    <li class="navigation__item"><i class="fas fa-graduation-cap"></i>Ucz się!</li>
+                    <li class="navigation__item"><i class="fas fa-heart"></i>Ulubione</li>
+                    <li class="navigation__item"><i class="fas fa-user-cog"></i>Ustawienia</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
