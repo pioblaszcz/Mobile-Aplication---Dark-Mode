@@ -21,8 +21,10 @@ const learnCategoryFirst = document.querySelector('.learnCategory-first > h2');
 const learnCategoryInside = document.querySelector('.learnInside-component');
 const learnCategoryComponent = document.querySelector('.firstComponent');
 
-const lawCategoryFirst = document.querySelector('.lawCategory > h2');
+const lawCategoryFirst = document.querySelector('.lawCategory-first > h2');
+const lawCategoryBefore = document.querySelector('.lawCategory-before');
 const lawCategoryComponent = document.querySelector('.lawCategoryComponent');
+const lawComponentBefore = document.querySelector('.lawComponentBefore');
 
 const favorite = document.querySelector('.menu-bottom > .fa-heart');
 const favoriteComponent = document.querySelector('.favorite-component');
@@ -40,6 +42,9 @@ const register = document.querySelector('.registerPhone');
 
 const settings = document.querySelector('.showSettings');
 const settingsComponent = document.querySelector('.editPhone');
+
+// const newsFirst = document.querySelector('.newsFirstInside');
+// const newsComponentInside = document.querySelector('.news-componentInside');
 
 // klikalność poorady
 
@@ -79,6 +84,10 @@ handleMenuButtonClick = (type) => {
         case 'learnCategoryFirst':
             learnCategoryInside.classList.add('moveRight');
             break;
+        case 'lawComponentBefore':
+            mainMenu.classList.add('moveRight');
+            lawComponentBefore.classList.add('moveRight');
+            break;
         case 'lawCategoryFirst':
             lawCategoryComponent.classList.add('moveRight');
             break;
@@ -93,6 +102,7 @@ handleMenuButtonClick = (type) => {
             break;
         case 'register':
             register.classList.add('hide');
+            break;
         case 'goBack':
             learnCategoryComponent.classList.remove('moveRight');
             lawCategoryComponent.classList.remove('moveRight');
@@ -105,7 +115,6 @@ handleMenuButtonClick = (type) => {
 }
 
 handleHomeClicked = () => {
-    console.log('click')
     mainMenu.classList.remove('moveRight');
     newsComponent.classList.remove('moveRight');
     lawComponent.classList.remove('moveRight');
@@ -117,12 +126,12 @@ handleHomeClicked = () => {
     lawCategoryComponent.classList.remove('moveRight');
     favoriteComponent.classList.remove('moveRight');
     learnCategoryInside.classList.remove('moveRight');
+    lawComponentBefore.classList.remove('moveRight');
     settingsComponent.classList.remove('showSettings');
 }
 
 handleCategoyFavoriteClicked = (category) => {
     categorysFavorite.map(categoryInside => categoryInside.classList.remove('active'));
-    category.classList.add('active');
     if (category.innerText !== 'Ucz się!') {
         wrapperLearn.style.display = "none";
         wrapperLaw.style.display = "block";
@@ -136,12 +145,13 @@ handleCategoyFavoriteClicked = (category) => {
 setTimeout(handleHideStartAplicationElement, 1400);
 
 newsButton.addEventListener('click', () => handleMenuButtonClick('news'));
-lawButton.addEventListener('click', () => handleMenuButtonClick('law'));
+lawButton.addEventListener('click', () => handleMenuButtonClick('lawComponentBefore'));
 learnButton.addEventListener('click', () => handleMenuButtonClick('learn'));
 discountsButton.addEventListener('click', () => handleMenuButtonClick('discounts'));
 trainingButton.addEventListener('click', () => handleMenuButtonClick('training'));
 learnCategoryFirst.addEventListener('click', () => handleMenuButtonClick('learnCategoryFirst'));
 lawCategoryFirst.addEventListener('click', () => handleMenuButtonClick('lawCategoryFirst'));
+lawCategoryBefore.addEventListener('click', () => handleMenuButtonClick('law'));
 favorite.addEventListener('click', () => handleMenuButtonClick('favoriteComponent'));
 porada.addEventListener('click', () => handleMenuButtonClick('porada'));
 registerButton.addEventListener('click', () => handleMenuButtonClick('register'));
