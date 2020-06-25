@@ -15,6 +15,106 @@
     <div class="app">
         <img src="./images/szablon.png" alt="szablon teloefonu" class="phone" />
         <div class="innerPhone">
+            <div class="registerPhone">
+                <h2>Startujemy!</h2>
+                <p>Powiedz nam coś o sobie...</p>
+                <form>
+                    <!-- <img src="./images/np.png" alt="" class="logoInsideRegister"> -->
+                    <label id="name">
+                        <p>Imię:</p> <input type="text" name="" id="">
+                    </label>
+                    <label id="email">
+                        <p>E-mail:</p> <input type="text" name="" id="">
+                    </label>
+                    <label id="area-container">
+                        <p>Wojew:</p>
+                        <select name="area" id="area">
+                            <option class="lightgray">wybierz z listy</option>
+                            <option>dolnośląskie</option>
+                            <option>małopolskie</option>
+                            <option>mazowieckie</option>
+                            <option>podkarpackie</option>
+                        </select>
+                    </label>
+                    <label id="county-container">
+                        <p>Powiat:</p>
+                        <select name="county" id="county">
+                            <option class="lightgray">wybierz z listy</option>
+                            <option>dolnośląskie</option>
+                            <option>małopolskie</option>
+                            <option>mazowieckie</option>
+                            <option>podkarpackie</option>
+                        </select>
+                    </label>
+                    <label id="check">
+                        <p class="Im">Jestem:</p>
+                        <input type="checkbox" name="" id="checkbox1">
+                        <p class="checkbox1-p">Zamawiającym</p>
+                        <input type="checkbox" name="" id="checkbox2">
+                        <p class="checkbox2-p">Wykonawcą</p>
+                        <input type="checkbox" name="" id="checkbox3">
+                        <p class="checkbox3-p">Inne</p>
+                    </label>
+                    <label id="check2">
+                        <input type="checkbox" name="" id="checkboxAccept">
+                        <p class="checkboxAccept-p">Dopisz mnie do Newslettera</p>
+                        <input type="checkbox" name="" id="checkboxAccept2">
+                        <p class="checkboxAccept2-p">Rejestrując się akceptuję regulamin i wyrażam zgodę na
+                            przetwarzanie moich danych
+                            osobowych podanych przeze mnie powyżej. <span>Pełna treść zgody...</span></p>
+                    </label>
+                    <div class="buttonToSubmit">
+                        <p>Potwierdź</p>
+                    </div>
+                </form>
+            </div>
+            <div class="editPhone">
+                <i class="fas fa-user-cog"></i>
+                <div class="home-container">
+                    <i class="fas fa-home"></i>
+                </div>
+                <form>
+                    <!-- <img src="./images/np.png" alt="" class="logoInsideRegister"> -->
+                    <label id="name">
+                        <p>Imię:</p> <input type="text" name="" id="">
+                    </label>
+                    <label id="email">
+                        <p>E-mail:</p> <input type="text" name="" id="">
+                    </label>
+                    <label id="area-container">
+                        <p>Wojew:</p>
+                        <select name="area" id="area">
+                            <option class="lightgray">wybierz z listy</option>
+                            <option>dolnośląskie</option>
+                            <option>małopolskie</option>
+                            <option>mazowieckie</option>
+                            <option>podkarpackie</option>
+                        </select>
+                    </label>
+                    <label id="county-container">
+                        <p>Powiat:</p>
+                        <select name="county" id="county">
+                            <option class="lightgray">wybierz z listy</option>
+                            <option>dolnośląskie</option>
+                            <option>małopolskie</option>
+                            <option>mazowieckie</option>
+                            <option>podkarpackie</option>
+                        </select>
+                    </label>
+                    <label id="check">
+                        <p class="Im">Jestem:</p>
+                        <input type="checkbox" name="" id="checkbox1">
+                        <p class="checkbox1-p">Zamawiającym</p>
+                        <input type="checkbox" name="" id="checkbox2">
+                        <p class="checkbox2-p">Wykonawcą</p>
+                        <input type="checkbox" name="" id="checkbox3">
+                        <p class="checkbox3-p">Inne</p>
+                    </label>
+                    <div class="buttonToSubmit">
+                        <p>Zapisz zmiany</p>
+                    </div>
+                </form>
+            </div>
             <div class="onInnerPhone"></div>
             <div class="startAplication">
                 <div class="loadingContainer">
@@ -100,8 +200,18 @@
                 <div class="training-component">
                     <h2>Szkolenia w Twojej okolicy</h2>
                     <input type="text" placeholder="lub wybierz miasto..." class="inputTown">
-                    <i class="fas fa-search"></i>
+                    <i class="fas fa-sort-up"></i>
+                    <div class="menuTrainings">
+                        <div class="menuElement active">Wszystkie</div>
+                        <div class="menuElement">Stacjonarne</div>
+                        <div class="menuElement">Wyjazdowe</div>
+                        <div class="menuElement">Online</div>
+                        <div class="menuElement">Ulubione</div>
+                    </div>
                     <div class="trainingSingle">
+                        <div class="new">
+                            <p>Nowe</p>
+                        </div>
                         <h3>Michał Kunikowski</h3>
                         <img src="./images/michalkunikowski.jpg" alt="miichal kunikowski" class="kunikowskiimg">
                         <p class="city">15-16 lipca - Katowice</p>
@@ -109,15 +219,14 @@
                         <div class="iconsTraining">
                             <i class="fas fa-share-alt"></i>
                             <i class="fas fa-heart"></i>
+                            <i class="fas fa-calendar-day"></i>
                         </div>
-                        <div class="borderBottom"></div>
                     </div>
-                    <div class="trainingSingle" style="margin-top: 60px;">
-                        <h3>Michał Kunikowski</h3>
-                        <img src="./images/michalkunikowski.jpg" alt="miichal kunikowski" class="kunikowskiimg">
-                        <p class="city">15-16 lipca - Katowice</p>
-                        <p class="title">"Zamówienia publiczne: nowelizacja systemu w praktyce"</p>
-                        <div class="borderBottom"></div>
+                    <div class="previous">
+                        <i class="fas fa-arrow-circle-left"></i>
+                    </div>
+                    <div class="next">
+                        <i class="fas fa-arrow-circle-right"></i>
                     </div>
                 </div>
                 <div class="favorite-component">
@@ -230,11 +339,40 @@
                             <p>1</p>
                         </div>
                     </div>
+                    <ul class="menuList">
+                        <li class="active">
+                            <p>Wszystkie</p>
+                        </li>
+                        <li>
+                            <p>Łatwe</p>
+                        </li>
+                        <li>
+                            <p>Średnie</p>
+                        </li>
+                        <li>
+                            <p>Trudne</p>
+                        </li>
+                    </ul>
                     <div class="list">
                         <div class="list-p newP">
-                            <div class="dottInsideList new"></div>Porada 1
+                            <div class="new">
+                                <p>Nowe</p>
+                            </div>
+                            Porada 1
                         </div>
                         <div class="list-p">
+                            Porada 2
+                        </div>
+                        <div class="list-p">
+                            Porada 3
+                        </div>
+                        <div class="list-p">
+                            Porada 4
+                        </div>
+                        <div class="list-p">
+                            Porada 5
+                        </div>
+                        <!-- <div class="list-p">
                             <div class="dottInsideList"></div>Porada 2
                         </div>
                         <div class="list-p">
@@ -266,7 +404,7 @@
                         </div>
                         <div class="list-p">
                             <div class="dottInsideList"></div>Porada 12
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -279,7 +417,9 @@
                     <i class="fas fa-share-alt"></i>
                     <i class="fas fa-heart"></i>
                     <h2>
-                        <div class="dott"></div> Tytuł porady
+                        <div class="new">
+                            <p>Nowe</p>
+                        </div> Tytuł porady
                     </h2>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi ab fuga amet perspiciatis,
                         est minus illo voluptate animi ad rem quibusdam? Explicabo voluptas asperiores repellendus
@@ -343,7 +483,7 @@
             </div>
             <div class="menu-bottom">
                 <div class="border-top"></div>
-                <i class="fas fa-user-cog"></i>
+                <i class="fas fa-user-cog showSettings"></i>
                 <div class="menu__home">
                     <i class="fas fa-home"></i>
                 </div>
@@ -359,6 +499,7 @@
                     <li class="navigation__item"><i class="fas fa-heart"></i>Ulubione</li>
                     <li class="navigation__item"><i class="fas fa-user-cog"></i>Ustawienia</li>
                 </ul>
+                <p>O aplikacji / RODO</p>
             </div>
         </div>
     </div>

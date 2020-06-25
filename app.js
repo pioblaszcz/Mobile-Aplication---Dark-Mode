@@ -15,7 +15,7 @@ const discountsButton = document.querySelector('.discounts');
 const trainingButton = document.querySelector('.training');
 const learnButton = document.querySelector('.learn');
 
-const goToHome = document.querySelector('.menu__home');
+const goHome = [...document.querySelectorAll('.fa-home')];
 
 const learnCategoryFirst = document.querySelector('.learnCategory-first > h2');
 const learnCategoryInside = document.querySelector('.learnInside-component');
@@ -35,6 +35,12 @@ const categorysFavorite = [...document.querySelectorAll('.categoryInContainer')]
 const wrapperLearn = document.querySelector('.wrapperLearn');
 const wrapperLaw = document.querySelector('.wrapperLaw');
 
+const registerButton = document.querySelector('.buttonToSubmit')
+const register = document.querySelector('.registerPhone');
+
+const settings = document.querySelector('.showSettings');
+const settingsComponent = document.querySelector('.editPhone');
+
 // klikalność poorady
 
 const porada = document.querySelector('.newP');
@@ -45,8 +51,10 @@ handleHideStartAplicationElement = () => {
 }
 
 handleMenuButtonClick = (type) => {
-    header.classList.add('moveRight');
-    burgerMenu.classList.add('moveRight');
+    if (type !== 'register') {
+        burgerMenu.classList.add('moveRight');
+        header.classList.add('moveRight');
+    }
     switch (type) {
         case 'news':
             mainMenu.classList.add('moveRight');
@@ -80,6 +88,11 @@ handleMenuButtonClick = (type) => {
         case 'porada':
             learnCategoryComponent.classList.add('moveRight');
             break;
+        case 'settings':
+            settingsComponent.classList.add('showSettings');
+            break;
+        case 'register':
+            register.classList.add('hide');
         case 'goBack':
             learnCategoryComponent.classList.remove('moveRight');
             lawCategoryComponent.classList.remove('moveRight');
@@ -92,6 +105,7 @@ handleMenuButtonClick = (type) => {
 }
 
 handleHomeClicked = () => {
+    console.log('click')
     mainMenu.classList.remove('moveRight');
     newsComponent.classList.remove('moveRight');
     lawComponent.classList.remove('moveRight');
@@ -103,6 +117,7 @@ handleHomeClicked = () => {
     lawCategoryComponent.classList.remove('moveRight');
     favoriteComponent.classList.remove('moveRight');
     learnCategoryInside.classList.remove('moveRight');
+    settingsComponent.classList.remove('showSettings');
 }
 
 handleCategoyFavoriteClicked = (category) => {
@@ -129,12 +144,14 @@ learnCategoryFirst.addEventListener('click', () => handleMenuButtonClick('learnC
 lawCategoryFirst.addEventListener('click', () => handleMenuButtonClick('lawCategoryFirst'));
 favorite.addEventListener('click', () => handleMenuButtonClick('favoriteComponent'));
 porada.addEventListener('click', () => handleMenuButtonClick('porada'));
+registerButton.addEventListener('click', () => handleMenuButtonClick('register'));
+settings.addEventListener('click', () => handleMenuButtonClick('settings'));
 
 goBack.map(item => item.addEventListener('click', () => handleMenuButtonClick('goBack')));
 goBackInsideLearn.addEventListener('click', () => handleMenuButtonClick('goBackInsideLearn'));
 
 categorysFavorite.map(category => category.addEventListener('click', () => handleCategoyFavoriteClicked(category)));
-goToHome.addEventListener('click', handleHomeClicked);
+goHome.map(item => item.addEventListener('click', handleHomeClicked));
 
 //hamburger
 

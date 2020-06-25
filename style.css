@@ -402,6 +402,15 @@ header{
     transition: .5s;
 }
 
+.navigation-hamburger > p{
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+}
+
 .navigation--active{
     transform: translateX(0px);
 }
@@ -687,6 +696,7 @@ header{
     width: 100%;
     height: 83%;
     transition: 1s;
+    overflow: hidden;
 }
 
 .inputTown{
@@ -703,12 +713,51 @@ header{
     position: relative;
 }
 
-.training-component > .fa-search{
+.training-component > .fa-sort-up{
     cursor: pointer;
     position: absolute;
-    top: 50px;
+    top: 35px;
     right: 50px;
     color: gray;
+    font-size: 30px;
+    transform: rotate(180deg);
+}
+
+.menuTrainings{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    width: 140%;
+}
+
+.menuTrainings > .menuElement{
+    background-color: rgb(197, 196, 196);
+    flex-basis: 15%;
+    padding: 3px 6px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.menuTrainings > .menuElement.active{
+    background-color: rgb(70, 70, 70);
+    color: rgb(236, 232, 232);
+}
+
+.new{
+    position: absolute;
+    top: 19px;
+    width: 40px;
+}
+
+.new > p{
+    color: white;
+    padding: 1px 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: rgb(230, 4, 4);
+    border-radius: 5px;
+    transform: translate(-50%, -50%);
 }
 
 .training-component > h2{
@@ -718,10 +767,12 @@ header{
 }
 
 .trainingSingle{
+    cursor: pointer;
     position: relative;
     height: 340px;
     width: 80%;
     margin: 0 auto;
+    margin-top: 55px;
     /* background-color: #000; */
 }
 
@@ -772,6 +823,43 @@ header{
     transform: translateX(-50%);
 }
 
+.previous{
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 40px;
+    left: 30px;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+}
+
+.previous > i{
+    font-size: 40px;
+    color: rgb(51, 64, 77);
+}
+
+.next{
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 40px;
+    right: 30px;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+}
+
+.next > i{
+    font-size: 40px;
+    color: rgb(51, 64, 77);
+}
+
+
 .iconsTraining > .fa-share-alt{
     cursor: pointer;
     font-size: 20px;
@@ -779,6 +867,12 @@ header{
 }
 
 .iconsTraining > .fa-heart{
+    cursor: pointer;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.iconsTraining > .fa-calendar-day{
     cursor: pointer;
     font-size: 20px;
 }
@@ -1021,6 +1115,19 @@ header{
     margin-left: 20px;
 }
 
+.advice > h2 > .new{
+    position: static;
+    display: inline-block;
+    margin-left: -20px;
+}
+
+.advice > h2 > .new > p{
+    height: 20px;
+    font-size: 15px;
+    position: static;
+    transform: translate(0, -3px);
+}
+
 .dott{
     position: absolute;
     top: 6.5%;
@@ -1185,7 +1292,41 @@ header{
 
 .list > .list-p{
     font-weight: bold;
-    margin:5px 0;
+    margin: 15px 0;
+    transform: translateX(20px);
+}
+
+.list-p > .new{
+    display: inline-block;
+    position: static;
+    margin: 5px -23px 5px 0;
+}
+
+.list-p > .new > p{
+    position: static;
+    transform: translate(-25px, 0);
+}
+
+
+.menuList{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.menuList > li{
+    cursor: pointer;
+    list-style: none;
+    background-color: rgb(197, 196, 196);
+    flex-basis: 15%;
+    padding: 3px 6px;
+    border-radius: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.menuList > li.active{
+    background-color: rgb(70, 70, 70);
+    color: rgb(236, 232, 232);
 }
 
 .list-p > .fa-heart{
@@ -1244,6 +1385,10 @@ header{
     font-size: 25px;
 }
 
+.listInsideLearn > .faveoriteCategoryLeran{
+    margin-bottom: 20px;
+}
+
 .listInsideLearn > .faveoriteCategoryLeran > h2{
     position: absolute;
     top: 50%;
@@ -1267,12 +1412,8 @@ header{
     margin-bottom: 1px;
 }
 
-.new{
+.active-dott{
     background-color: rgb(224, 4, 4);
-}
-
-.newP{
-      cursor: pointer;
 }
 
 .wrapperLaw{
@@ -1300,3 +1441,356 @@ header{
 .articleFavorite > p > .fa-heart:hover{
   color: black;
 }
+
+.registerPhone{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(51, 64, 77);
+    z-index: 10;
+    transition: .5s;
+}
+
+.editPhone{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(51, 64, 77);
+    z-index: 10;
+    transition: .5s;
+    transform: translateX(-100%);
+}
+
+.home-container{
+    cursor: pointer;
+    position: absolute;
+    bottom: 7%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(51, 64, 77);
+    background-color: rgb(248, 193, 11);
+    transform: translateX(-50%);
+}
+
+.home-container > .fa-home{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(51, 64, 77);
+}
+
+.editPhone > .fa-user-cog{
+    position: absolute;
+    top: 13%;
+    font-size: 50px;
+    left: 25%;
+    transform: translateX(-50%);
+}
+
+.editPhone.showSettings{
+    transform: translateX(0);
+}
+
+.registerPhone > h2, .editPhone > h2{
+    position: absolute;
+    top: 9%;
+    display: block;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(248, 193, 11);
+    font-size: 2rem;
+    letter-spacing: 2px;
+}
+
+.registerPhone > p, .editPhone > p{
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    color: lightgray;
+}
+
+.registerPhone > form, .editPhone > form{
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 50%;
+    /* border-radius: 5px;
+    background-color: rgb(211, 211, 211); */
+}
+
+.editPhone > form{
+    top: 26%;
+}
+
+#name{
+    position: absolute;
+    top: 0%;
+    left: 45%;
+    /* text-align: center; */
+    font-size: 20px;
+    width: 100%;
+    color: rgb(204, 204, 204);
+    font-weight: bold;
+    letter-spacing: 1px;
+    /* text-transform: uppercase; */
+    transform: translateX(-50%);
+}
+
+#name > p{
+    position: absolute;
+    top: 10%;
+    right: 65%; 
+}
+
+#name > input{
+    position: absolute;
+    top: 10%;
+    left: 68%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    border: none;
+    width: 170px;
+    margin-top: 5px;
+    height: 20px;
+    padding: 2px 5px;
+}
+
+#email{
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    /* text-align: center; */
+    font-size: 20px;
+    width: 100%;
+    color: rgb(204, 204, 204);
+    font-weight: bold;
+    letter-spacing: 1px;
+    /* text-transform: uppercase; */
+    transform: translateX(-50%);
+}
+
+#email > p{
+    position: absolute;
+    top: 10%;
+    right: 65%; 
+}
+
+#email > input{
+    position: absolute;
+    top: 10%;
+    left: 68%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    border: none;
+    width: 170px;
+    margin-top: 5px;
+    height: 20px;
+    padding: 2px 5px;
+}
+
+#area-container{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    font-size: 20px;
+    width: 100%;
+    color: rgb(204, 204, 204);
+    font-weight: bold;
+    letter-spacing: 1px;
+    transform: translateX(-50%);
+}
+
+#area-container > p{
+    position: absolute;
+    top: 10%;
+    right: 59%; 
+    transform: translateX(-50%);
+}
+
+#area{
+    position: absolute;
+    top: -4px;
+    left: 62%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    border: none;
+    width: 160px;
+    margin-top: 5px;
+    height: 22px;
+    padding: 2px 5px;
+    font-size: 12px;
+    /* border: 1px solid gray; */
+}
+
+#county-container{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    font-size: 20px;
+    width: 100%;
+    color: rgb(204, 204, 204);
+    font-weight: bold;
+    letter-spacing: 1px;
+    transform: translateX(-50%);
+}
+
+#county-container > p{
+    position: absolute;
+    top: 10%;
+    right: 59%; 
+    transform: translateX(-50%);
+}
+
+#county{
+    position: absolute;
+    top: -4px;
+    left: 62%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    border: none;
+    width: 160px;
+    margin-top: 5px;
+    height: 22px;
+    padding: 2px 5px;
+    font-size: 12px;
+}
+
+#check{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    font-size: 20px;
+    width: 100%;
+    color: rgb(204, 204, 204);
+    font-weight: bold;
+    letter-spacing: 1px;
+    transform: translateX(-50%);
+}
+
+#check > .Im{
+    position: absolute;
+    top: 10%;
+    right: 59%; 
+    transform: translateX(-50%);
+}
+
+#checkbox1{
+    position: absolute;
+    top: 6px;
+    right: 59%; 
+    transform: translateX(-50%);
+}
+
+#checkbox2{
+    position: absolute;
+    top: 32px;
+    right: 59%; 
+    transform: translateX(-50%);
+}
+
+#checkbox3{
+    position: absolute;
+    top: 58px;
+    right: 59%; 
+    transform: translateX(-50%);
+}
+
+.checkbox1-p{
+    position: absolute;
+    top: 4px;
+    left: 44%;
+    font-size: 15px;
+    color: rgb(248, 193, 11);
+}
+
+.checkbox2-p{
+    position: absolute;
+    top: 30px;
+    left: 44%; 
+    font-size: 15px;
+    color: rgb(248, 193, 11);
+}
+
+.checkbox3-p{
+    position: absolute;
+    top: 56px;
+    left: 44%;
+    font-size: 15px;
+    color: rgb(248, 193, 11);
+}
+
+#check2{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    font-size: 15px;
+    width: 100%;
+    color: rgb(233, 233, 233);
+    letter-spacing: 1px;
+    transform: translateX(-50%); 
+}
+
+.checkboxAccept-p{
+    cursor: pointer;
+    position: absolute;
+    top: -1px;
+    left: 7%;
+}
+
+#checkboxAccept2{
+    position: absolute;
+    top: 30px;
+    left: 0%;
+}
+
+.checkboxAccept2-p{
+    cursor: pointer;
+    position: absolute;
+    top: 28px;
+    left: 7%;
+}
+
+.buttonToSubmit{
+    cursor: pointer;
+    position: absolute;
+    top: 130%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(248, 193, 11);
+    padding: 5px 25px;
+    border-radius: 5px;
+}
+
+.buttonToSubmit.buttonToSubmit > p{
+    font-weight: bold;
+    color: rgb(51, 64, 77);
+}
+
+.editPhone > form > .buttonToSubmit{
+    top: 100%;
+}
+
+.hide{
+    transform: translateX(-100%);
+}
+
+.list > .newP{
+    transform: translate(0, 5px);
+    cursor: pointer;
+}
+
+
+/* .logoInsideRegister{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+} */
