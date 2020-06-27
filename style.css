@@ -728,6 +728,7 @@ header{
     position: relative;
 }
 
+
 .training-component > .fa-sort-up{
     cursor: pointer;
     position: absolute;
@@ -836,6 +837,7 @@ header{
     top: 340px;
     left: 50%;
     transform: translateX(-50%);
+    transition: .7s;
 }
 
 .previous{
@@ -1130,6 +1132,7 @@ header{
     top: 270px;
     width: 100%;
     border-bottom: 1px solid rgb(51, 64, 77);
+    transition: .7s;
 }
 
 .questionToArticle{
@@ -1251,6 +1254,7 @@ header{
     bottom: -70px;
     left: 13%;
     letter-spacing: -1px;
+    transition: .7s;
 }
 
 .advice > .iconsTraining{
@@ -1267,6 +1271,7 @@ header{
     bottom: -260px;
     width: 220px;
     height: 180px;
+    transition: .7s;
 }
 
 .city{
@@ -1277,6 +1282,7 @@ header{
     font-weight: bold;
     font-size: 24px;
     letter-spacing: -1px;
+    transition: .7s;
 }
 
 .title{
@@ -1284,6 +1290,7 @@ header{
     position: absolute;
     bottom: -330px;
     left: 13%;
+    transition: .7s;
 }
 
 .podst{
@@ -1913,6 +1920,67 @@ header{
     position: relative;
     transform: translateY(-26px);
     display: inline-block;
+}
+
+.moveDownElement{
+    transform: translate(0, 240px);
+}
+
+.trener-img.moveDownElement{
+    transform: translate(-50%, 240px);
+}
+
+.questionMain{
+    position: absolute;
+    top: 280px;
+    transition: 1s;
+    opacity: 0;
+}
+
+.questionMain.showQuestion{
+    opacity: 1;
+}
+
+.questionMain > h4{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: rgb(51, 64, 77);
+}
+
+.questionMain > h5{
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: rgb(51, 64, 77);
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.odps > div{
+    cursor: pointer;
+    margin: 10px 0;
+    background-color: rgb(70, 70, 70);
+    border-radius: 10px;
+    width: 50%;
+    padding: 2px 5px;
+    color: rgb(236, 236, 236);
+    transition: .5s;
+}
+
+.odps > div.true{
+    background-color: darkgreen;
+    color: rgb(224, 224, 224);
+}
+
+.odps > div.false{
+    background-color: darkred;
+    color: rgb(224, 224, 224);
+}
+
+.odp{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 /* 

@@ -176,4 +176,41 @@ const handleClick = () => {
 }
 
 hamburger.addEventListener('click', handleClick);
-// onInnerPhone--active
+
+
+//Pytanie sprawdzające
+
+const handleAnswerClicked = () => {
+    answer1.classList.add('true');
+    answer2.classList.add('false');
+    answer3.classList.add('false');
+}
+
+const answer1 = document.querySelector('.odp1');
+const answer2 = document.querySelector('.odp2');
+const answer3 = document.querySelector('.odp3');
+
+const elementToMove = document.querySelector('.borderAdvice');
+const elementToMove2 = document.querySelector('.trenerToMove');
+const elementToMove3 = document.querySelector('.trener-img');
+const elementToMove4 = document.querySelector('.cityToMove');
+const elementToMove5 = document.querySelector('.titleToMove');
+const elementToMove6 = document.querySelector('.iconsTrainingToMove');
+
+const mainQuestion = document.querySelector('.questionMain');
+
+const QuestionToArticle = document.querySelector('.questionToArticle');
+
+const answers = [...document.querySelectorAll('.odps > div')];
+
+QuestionToArticle.addEventListener('click', () => {
+    elementToMove.classList.toggle('moveDownElement');
+    elementToMove2.classList.toggle('moveDownElement');
+    elementToMove3.classList.toggle('moveDownElement');
+    elementToMove4.classList.toggle('moveDownElement');
+    elementToMove5.classList.toggle('moveDownElement');
+    elementToMove6.classList.toggle('moveDownElement');
+    mainQuestion.classList.toggle('showQuestion');
+});
+
+answers.map(answer => answer.addEventListener('click', handleAnswerClicked))
